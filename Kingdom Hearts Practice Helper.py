@@ -245,14 +245,6 @@ class Root(customtkinter.CTk):
         self.my_frame.grid(row=0, column=0, sticky="nsew")
         print(self.my_frame)
 
-# class Root(customtkinter.CTk):
-#     def __init__(self):
-#         super().__init__()
-#         root = customtkinter.CTk()
-#         root.geometry('600x1000')
-#         root.title('Kingdom Hearts Practice Helper')
-#         root.columnconfigure(0, weight = 1)
-
 
 root = Root()
 root.mainloop()
