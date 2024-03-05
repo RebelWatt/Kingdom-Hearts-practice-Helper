@@ -10,3 +10,6 @@ customtkinter = "*"
 
 [requires]
 python_version = "3.12"
+
+[scripts]
+build = "pyinstaller \"Kingdom Hearts Practice Helper.spec\""
