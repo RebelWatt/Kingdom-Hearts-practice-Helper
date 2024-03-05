@@ -112,14 +112,15 @@ class MyFrame(customtkinter.CTkScrollableFrame):
         folderWalker = os.walk(world_dstFolder[folder])
         folders = next(folderWalker)[2]
         for file in folders:
-                bossrushfiles.append(file)
-                entry = file
-                entry = entry.split('.')[0]
-                if '_' in entry:
-                    entry = entry[4:]
-                customtkinter.CTkButton(self.saves_button_frame, text = entry, 
-                                    command= lambda name = file: self.loadSave(name, world_dstFolder[folder])).grid(row = r, column = i, 
-                                                                                                            padx = 10, pady = 10, sticky="news")
+                if file[-4:] == '.dat':
+                    bossrushfiles.append(file)
+                    entry = file
+                    entry = entry.split('.')[0]
+                    if '_' in entry:
+                        entry = entry[4:]
+                    customtkinter.CTkButton(self.saves_button_frame, text = entry, 
+                                        command= lambda name = file: self.loadSave(name, world_dstFolder[folder])).grid(row = r, column = i, 
+                                                                                                                padx = 10, pady = 10, sticky="news")
                 i = i+1 
                 if i == 1:
                     i = 0
@@ -243,7 +244,6 @@ class Root(customtkinter.CTk):
         self.grid_columnconfigure(0, weight=1)
         self.my_frame = MyFrame(master=self, width=600, height=1000, corner_radius=0, fg_color="transparent")
         self.my_frame.grid(row=0, column=0, sticky="nsew")
-        print(self.my_frame)
 
 
 root = Root()
