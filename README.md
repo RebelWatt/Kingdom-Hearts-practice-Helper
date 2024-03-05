@@ -4,9 +4,9 @@
 A tool for moving save files in order to practice different segments in Kingdom Hearts speedruns
 
 ## Dependencies
-python3
-luabackend hook - https://github.com/Sirius902/LuaBackend/releases/tag/v1.7.3-hook
-KHPCSpeedrun Tools - https://github.com/S0nzero/KHPCSpeedrunTools/tree/main
+1. python3
+2. luabackend hook - https://github.com/Sirius902/LuaBackend/releases/tag/v1.7.3-hook
+3. KHPCSpeedrun Tools - https://github.com/S0nzero/KHPCSpeedrunTools/tree/main
 
 ## Installing and Using
 1. Download luabackend hook from https://github.com/Sirius902/LuaBackend/releases/tag/v1.7.3-hook and install it by following their instructions
